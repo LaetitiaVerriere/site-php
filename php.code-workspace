@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "..\\cours-php-wamp\\Templates\\templates"
+		},
+		{
+			"path": "..\\site-cours-php"
 		}
 	],
 	"settings": {

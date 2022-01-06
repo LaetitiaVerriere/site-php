@@ -2,10 +2,10 @@
 
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Mon super premier site</title>
+  
+  <title>Mon site en local</title>
   <meta name="description" content="Mon site en local">
   <meta name="author" content="Alexandre Delaistre">
 
@@ -19,34 +19,80 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="stylesheet" href="css/styles.css">
-
+  <link rel="stylesheet" href="./assets/styles/style.css">
 </head>
 
 <body>
-    <?php
-      include './src/devtool/debug.devtool.php';
-    //   $_GET['variable'] //index string obligatoirement
+    <nav class="nav-bar">
+        <ul>
+            <li><a href=""><div class="list-element">Mon super site</div></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="content-block">
+        <nav class="side-menu">
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1/site-cours-php/index.php?password=truc">
+                        <div class="list-element">
+                    List 1</div>
+                </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="content">
+        <?php 
 
-    // $dir = "../src/devtool";
-    $directory = './src/devtool/';
-    $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($directory));
+            include './src/devtool/debug.devtool.php';
+            //http://127.0.0.1/site-cours-php/index.php?variable=10
+        
+        
+            if($_GET['password'] == 'truc') {
+                include './src/includes/login.inc.php';
+            } else {
+                include './src/includes/oups.inc.php';
+            }
 
-      foreach ( $iterator as $path ) {
-          if ($path->isDir()) {
-              debug($path->__toString());
-          } else {
-              debug($path->__toString());
-          }}
-    //   $directory = new \RecursiveDirectoryIterator($path);
-    //   $iterator = new \RecursiveIteratorIterator($directory);
-    //   $files = array();
-    //   foreach ($iterator as $info) {
-    //     if (...custom conditions...) {
-    //       $files[] = $info->getPathname();
-    //     }
-    //   }
-    ?>
-    <script src="js/scripts.js"></script>
+
+    ?> 
+        
+        
+        
+        <!--form id="formulaire" class="form spacer-container">
+                <div>
+                    <label for="date">Date :</label></br>
+                    <input type="date" name="date" id="date" class="form-control"></br>
+                    <label for="titre">Titre :</label></br>
+                    <input type="text" name="titre" id="titre" class="form-control"></br>
+                    <label for="description">Description :</label></br>
+                    <textarea name="description" id="description" class="form-control"></textarea>
+                </div>
+            </form-->
+        </div>
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <script src="js/scripts.js"></script> 
 </body>
-</html>
+</html>``
