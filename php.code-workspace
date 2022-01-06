@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "..\\cours-php-wamp"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\cours-php-wamp\\Templates\\templates"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "cours-php-wamp"
+	}
+}
